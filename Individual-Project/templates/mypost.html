@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alma's web</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+</head>
+<body>
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/post">Post</a></li>
+  <li><a href="/signout">About</a></li>
+  <li><a class="active" href="/mypost">My posts</a></li>
+  <li><a href="/signout">Sign out</a></li>
+</ul>
+<h4>View your posts:</h4>
+{%for post in mypost%}
+    <div>
+    <h1 style="font-size: 20px;background-color: #FF69B4">{{mypost[post]['title']}}</div>
+    {{mypost[post]['text']}}
+    <a style="color:#FF69B4" href="{{mypost[post]['link']}}">Press to View the place</a></div></h1>
+    {%endfor%}
+    <center>
+<a href="/remove"><button>Delete all your post</button></a></center>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alma's web</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+</head>
+<body>
+        <ul>
+  <li><a href="/">Home</a></li>
+  <li><a class="active" href="/post">Post</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/mypost">My posts</a></li>
+  <li><a href="/signout">Sign out</a></li>
+</ul>
+<div style="padding:1px 16px;height:1000px;">
+    <form action="/post" method="POST">
+        <div>
+    <input type="text" name="title" placeholder="Title" minlength="1"></div>
+    <div>
+    <input type="text" name="text" placeholder="Text" maxlength="150"></div>
+    <div>
+    <input type="link" name="link" placeholder="Picture link (of the place)" ></div>
+    <input type="submit" value="Submit">
+</form></div>
+
+</body>
+</html>

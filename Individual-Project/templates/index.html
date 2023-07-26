@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Alma's web</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
 </head>
-<body>
-    
-</body>
+    <body>
+
+        <ul>
+      <li><a class="active" href="/">Home</a></li>
+      <li><a href="/post">Post</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/mypost">My posts</a></li>
+      <li><a href="/signout">Sign out</a></li>
+    </ul>
+    <h8> The date: {{date}}</h8>
+        <div style="padding:1px 16px;height:1000px;">
+            <h4> Refresh to get more photos like this: <img src="https://random.imagecdn.app/500/150"></h4>
+        <p style="font-size:30px">Hi! in this website you can share the best places you have been in so other people and you will experience great advantures around the world</p>
+    <img src="https://c1.wallpaperflare.com/preview/427/491/622/nice-view-view-from-above-natural-blue-sky.jpg" width="500" height="300">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHbYUCkfUK565fET4bZhjmqHAFDEwTS5CCaQ&usqp=CAU" width="500" height="300">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCJKyQyNVdv68W1RwbFdkS5jsMwMfXC5Q12Q11dByUCMDk1Fq-n8Dz-WFJb5Tn6kehTJ4&usqp=CAU" width="500" height="300">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/01/3f/01/00/nice-view.jpg" width="500" height="300">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqoKfvgJuKo9JxnJbTnO0OA1NZbEjA0N1DRQ&usqp=CAU" width="500" height="300">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPxRxq0SXyjtV7enzx_CiAPpZFWfg7Mvp0jg&usqp=CAU" width="500" height="300">
+    <h1>The posts:</h1>
+
+        {%for i in posts%}
+        {%for post in posts[i]%}
+        <div>
+        <h1 style="font-size: 20px; background-color: #FF69B4">{{posts[i][post]['title']}}</h1>
+        <h1>{{posts[i][post]['text']}}
+        <a style="color:#FF69B4" href="{{posts[i][post]['link']}}">Press to View the place</a></div></h1>
+        {%endfor%}
+        {%endfor%}
+    </body></div>
 </html>

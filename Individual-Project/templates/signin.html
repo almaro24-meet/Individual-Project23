@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alma's web</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+</head>
+<body>
+    <form method="post" action="/signin">
+        <!-- Heading -->
+        <h4>
+        Sign in to your account
+        </h4>
+
+        <!-- Subheading -->
+        <p >
+        Fill up your information
+        </p>
+
+        <!-- Email -->
+        <div>
+            <label>Email address</label>
+            <div>
+                <input type="email"  name="email" id="emailStr" required>
+            </div>
+        </div>
+
+        <!-- Password -->
+        <div>
+            <label>Password</label>
+            <div class="input-group">
+                <input type="password"  name="password" minlength="6">
+            </div>
+        </div>
+        
+        <!-- Button -->
+        <div>
+            <input type="submit"/>
+
+        </div>
+    </form>
+    <center>
+    <a href="/signup"><button>Sign up</button></a></center>
+</body>
+</html>
